@@ -1,0 +1,187 @@
+:root {
+    /* NUEVA PALETA: FONDO OSCURO, AZUL Y DORADO */
+    --color-principal: #210be0; 
+    --color-secundario: #FFD700; 
+    --color-fondo-oscuro: #121212; 
+    --color-fondo-claro: #1E1E1E; 
+    --color-texto-claro: #FFFFFF; 
+    --color-texto-gris: #B0B0B0; 
+}
+
+/* --- ESTILOS BASE Y GENERALES --- */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--color-texto-claro);
+    background-color: var(--color-fondo-oscuro);
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+}
+
+a {
+    color: var(--color-principal); /* Links en azul */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--color-secundario); /* Hover de links en dorado */
+}
+
+/* --- HEADER Y NAVEGACIÓN --- */
+
+header {
+    background: var(--color-fondo-oscuro);
+    color: var(--color-texto-claro);
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+header nav a {
+    color: var(--color-texto-claro);
+    margin: 0 25px;
+    font-size: 1.1em;
+    padding: 5px 10px;
+    border-bottom: 2px solid transparent; 
+}
+
+header nav a:hover {
+    color: var(--color-secundario); /* Detalle de menú en dorado */
+    border-bottom: 2px solid var(--color-secundario);
+}
+
+/* --- SECCIONES GENERALES --- */
+
+section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+section:nth-child(even) { /* Fondo alterno para mejor contraste */
+    background-color: var(--color-fondo-claro);
+}
+
+h2 {
+    color: var(--color-principal); /* Títulos principales en azul */
+    font-size: 2.2em;
+    margin-bottom: 10px;
+}
+
+/* --- SECCIÓN INICIO  --- */
+
+#inicio {
+    background-color: var(--color-fondo-oscuro);
+    padding: 100px 20px;
+    color: var(--color-texto-claro);
+}
+
+#inicio h1 {
+    font-size: 3em;
+    color: var(--color-texto-claro); /* Nombre en blanco */
+    margin-bottom: 5px;
+}
+
+#inicio p {
+    font-size: 1.3em;
+    color: var(--color-texto-gris); 
+    margin-top: 10px;
+}
+
+/* --- SECCIÓN PROYECTOS Y HABILIDADES (GRID) --- */
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px; 
+    text-align: left;
+}
+
+.project-card {
+    background: var(--color-fondo-claro); /* Fondo oscuro en las tarjetas */
+    color: var(--color-texto-gris);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 5px solid var(--color-principal); /* Borde superior en azul */
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+    border-top: 5px solid var(--color-secundario);
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    object-fit: cover;
+    max-height: 180px;
+}
+
+.project-card h3 {
+    color: var(--color-principal); /* Títulos de proyecto en azul */
+    margin-bottom: 10px;
+    font-size: 1.4em;
+}
+
+.project-card p {
+    color: var(--color-texto-gris);
+}
+
+.project-card ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+/* --- AJUSTE DE ESPACIO DE SECCIONES --- */
+#habilidades {
+    /* Aplicando el ajuste para la separación */
+    padding-top: 80px; 
+    padding-bottom: 80px; 
+}
+
+/* --- SECCIÓN CONTACTO  --- */
+
+#contacto {
+    background-color: var(--color-fondo-oscuro);
+    color: white;
+    padding: 40px 20px;
+    border-top: 2px solid var(--color-principal); /* Línea azul superior */
+}
+
+#contacto h2 {
+    color: white;
+    font-size: 1.8em;
+}
+
+#contacto p {
+    margin-top: 15px;
+    font-size: 1.1em;
+}
+
+#contacto a {
+    color: var(--color-principal); /* Links de contacto en azul */
+    margin: 0 10px;
+    font-weight: bold;
+}
